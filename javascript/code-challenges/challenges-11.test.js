@@ -20,7 +20,12 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-};
+ 
+  const entries = Object.entries(obj);
+  //var list2 = Object.values(obj);
+
+  return entries;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -85,6 +90,16 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  for (let i = 0; i < input.length; i++) {
+    // get the size of the inner array
+    var innerArrayLength = input[i].length;
+    // loop the inner array
+    for (let j = 0; j < innerArrayLength; j++) {
+      if(input[i][j] %5 !==0 ){
+        input.splice(input[i][j],1);
+      }
+    }
+  } return input;
 };
 
 /* ------------------------------------------------------------------------------------------------
